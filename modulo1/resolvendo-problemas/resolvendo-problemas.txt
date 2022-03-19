@@ -1,0 +1,7 @@
+O primeiro passo é ter atençao no que você está querendo fazer;
+O segundo passo é retirar informaçoes relevantes
+o terceiro é pensar sobre entradas e saidas
+o quarto é é fazer um esquema visual, pode ser um fluxograma ou escrita no papel 
+o quinto é criar um codigo que te faça entender a logica
+o sexto é testar o codigo 
+o setimo é tentar deixar o codigo mais legivel, mais apresentavel e mais facil de compreender
