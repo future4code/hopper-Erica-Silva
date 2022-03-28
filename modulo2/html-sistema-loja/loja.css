@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(212, 182, 240);
+    
+}
+
+img{
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    padding-right: 5px;
+    
+}
+
+.nome-loja{
+    font-size: 30px;
+    
+}
+
+th{
+    background-color: blueviolet;
+}
+td{
+    background-color: rgb(200, 147, 247);
+}
