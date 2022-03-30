@@ -35,7 +35,8 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+   width: 20px;
+   
 }
 
 .botao-amarelo {
@@ -64,6 +65,7 @@ div img {
 
 .icone {
     height: 15px;
+    
 }
 
 
@@ -136,9 +138,6 @@ td img{
     height: 100px;
     
 }
-
-
-
 
 #back-button {
     background-color: white;
