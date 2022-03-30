@@ -19,6 +19,9 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border-top: black;
+    border-left: black;
+    border-right: black;
 }
 
 button:focus {
@@ -141,6 +144,7 @@ td img{
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    
     
 }
 
