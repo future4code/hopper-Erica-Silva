@@ -112,6 +112,8 @@ div:last-child {
 
 table {
     width: 60%;
+    text-align: center;
+   
 }
 
 td button {
@@ -125,6 +127,7 @@ td button {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    
 }
 
 
