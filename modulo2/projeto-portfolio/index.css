@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+header img{
+   border-radius: 100px;
+   height: 150px;
+   width: 150px;
+   margin: 10px;
+}
+li{
+    display: inline-block;
+    margin: 20px;
+    color: azure;
+    font-size: 15px;
+        
+}
+button:hover{
+    background-color: rgb(83, 6, 155);
+   
+  
+    
+}
+button{
+    background-color:#B499EB;
+    border: none;
+    cursor: pointer;
+}
+
+body{
+    
+background-color: #B499EB;
+font-family:'BIZ UDPMincho', serif;
+display: inline;
+
+}
+
+main{
+    display: grid;
+   flex-direction: column;
+   grid-template-columns: 1fr 1fr;
+   align-content: center;
+}
+
+.coracao{
+    width: 40px;
+    height: 20px;
+}
+
+.sobre-mim{
+    display: grid;
+    margin-right: 40px;
+    align-content: center;
+
+ 
+}
+
+.foto img{
+    width: 500px;
+    height: 400px;
+}
+
+
+h1{
+font-family:'BIZ UDPMincho', serif;    
+font-size: 50px;
+margin-left: 30px;
+}
+
+h2{
+font-family:'BIZ UDPMincho', serif;    
+font-size: 40px;
+
+}
+
+div img{
+    width: 700px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+.imagens-skills img{
+    height: 100px;
+    width: 150px;
+    margin-left: 20px;
+}
+.contatos{
+    display: flex;
+    flex-direction: column;
+}
+
+.contatos img{
+    height: 40px;
+    width: 50px;
+}
+
+.projeto{
+   
+    margin-top: 250px;
+    justify-content: center;
+   
+}
+
+.projeto img{
+    height: 50px;
+    width: 60px; 
+}
+
+.projetos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: flex-start;
+     
+}
+
+.projetos img{
+    width: 300px;
+    height: 200px;
+
+    
+}
+
+.projetos p{
+    align-content: center;
+    margin-left: 50px;
+   
+}
+
+.projetos div{
+box-shadow: 5px 5px 5px rgb(116, 92, 116);
+background-color: #c1adeb;
+margin-bottom: 100px;
+margin-top: 100px;
+margin-left: 20px;
+
+
+}
+
+footer{
+    color: black;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 100px;
+    display: inline-block; 
+    bottom: 0px; 
+    background-color: rgb(114, 134, 134);
+
+  }
+ 
+
+
+
