@@ -4,6 +4,15 @@
    margin: 0;
 }
 
+/* body*/
+
+body{
+    background-color: antiquewhite;
+    height: 100%;  
+    
+    
+ }
+ 
 
 /*cabeçalho*/
 header{
@@ -30,13 +39,6 @@ label input{
   width: 100%;
 } 
 
-/* body*/
-body{
-   background-color: antiquewhite;
-   height: 100%;  
-   
-}
-
 
 /*pagina principal*/
 nav{
@@ -46,6 +48,7 @@ nav{
     grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 2%;
     row-gap: 2%;
+   
     
 }
 
@@ -77,7 +80,6 @@ nav video{
    margin-top: 20%; 
   
 }
-
 
 /*rodapé*/
 footer{
