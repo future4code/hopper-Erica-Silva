@@ -4,25 +4,17 @@
    margin: 0;
 }
 
-/* body*/
-
-body{
-    background-color: antiquewhite;
-    height: 100%;  
-    
-    
- }
- 
 
 /*cabeçalho*/
 header{
+   
     
-    background-color: rgb(255, 145, 0);
+    background-color: #F16B19;
     display: flex;
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    padding: 20px 10px;
+    padding: 1% 1%;
     
     
 }
@@ -31,24 +23,38 @@ header a{
     color: black;
     
 }
+header img{
+    width: 10vw;
+    height: 20vh;
+   
+}
 
 /* busca*/
 label input{
   display: flex;
-  margin-right: 100px;
+  margin-right: 100%;
   width: 100%;
 } 
+
+/* body*/
+body{
+   
+   background-color: antiquewhite;
+   height: 100%; 
+   
+   
+}
 
 
 /*pagina principal*/
 nav{
     display: grid;
+    justify-items: center;
     flex-direction: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 2%;
     row-gap: 2%;
-   
     
 }
 
@@ -81,9 +87,10 @@ nav video{
   
 }
 
+
 /*rodapé*/
 footer{
-    background-color: rgb(255, 145, 0);
+    background-color: #F16B19;
     display: flex;
     justify-content: center;
     bottom: 0;
@@ -91,3 +98,45 @@ footer{
 
     
 }
+
+@media screen and (max-device-width:800px) {
+    header,nav,footer{
+        display: flex;
+
+        
+    }
+
+    header img{
+       
+        width: 80px;
+        height: 100px;
+    }
+    #tela-inicial{
+        max-width: 800px;
+        display: flex;
+    }
+    
+    .videos video{
+        display: flex;
+        width: 80%;
+        margin:auto;
+        
+
+     } 
+
+    .video-pag video{
+        display: flex;    
+        width: 300px;
+        margin: 0 auto
+        
+    }
+    
+
+    nav .paginas-videos{
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100px;
+        height: 200px;
+    }
+ }
