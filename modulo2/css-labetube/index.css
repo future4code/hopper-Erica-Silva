@@ -38,25 +38,30 @@ label input{
 
 /* body*/
 body{
-   
+   display: grid;
    background-color: antiquewhite;
    height: 100%; 
-   
-   
+   grid-template-columns: 1fr ;
+   grid-template-rows: 1fr 7fr 1fr;
 }
 
 
 /*pagina principal*/
-nav{
+
+#tela-inicial{
     display: grid;
     justify-items: center;
     flex-direction: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr;
     column-gap: 2%;
     row-gap: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     
 }
+
+
 
 nav video{
     width: 100%;
@@ -74,17 +79,22 @@ nav video{
 }
 
 /*videos*/
+.corpo-video{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 7fr 1fr;
+}
 
-.paginas-videos video{
-   display: flex;
-   width: 150%;
-   height: 100%;
-   flex-direction: column;
-   justify-items: center;
-   align-items: center;
-   margin-left: 120%;
-   margin-top: 20%; 
-  
+.paginas-videos{
+    display: grid;
+    justify-items: center;
+    flex-direction: column;
+    grid-template-columns: 100vh ;
+    grid-template-rows: 1fr ;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 
@@ -92,51 +102,94 @@ nav video{
 footer{
     background-color: #F16B19;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     bottom: 0;
     padding: 10px;
-
+    margin-top: 80px;
     
 }
 
+footer p{
+    
+    margin: 0 auto;
+}
+
 @media screen and (max-device-width:800px) {
-    header,nav,footer{
+   /*body tela inicial*/
+    body{
+        max-width: 800px;
         display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    /*body tela dos videos*/
+
+    .corpo-video{
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 3.2fr 0.1fr;
+        height: 100%;
+        
+
+    }
+    
+    /*cabeçalho geral*/
+    header{
+        max-width: 800px;
+        display: flex;
+        height: 100px;
+        margin-bottom: 30px;
+        
+        
 
         
     }
 
     header img{
        
-        width: 80px;
-        height: 100px;
+        width: 18vh;
+        height: 16vh;
     }
+
+    header label{
+        margin-right: 5px;
+    }
+
     #tela-inicial{
         max-width: 800px;
         display: flex;
     }
-    
-    .videos video{
-        display: flex;
-        width: 80%;
-        margin:auto;
-        
+     
+    .paginas-videos a{
+      height: 100%;
 
-     } 
-
-    .video-pag video{
-        display: flex;    
-        width: 300px;
-        margin: 0 auto
-        
     }
-    
 
-    nav .paginas-videos{
+    nav .paginas-videos video{
+        
+        width: 50%;
+        height: 200px;
+        margin:center;
+        
+
+     }
+
+   .paginas-videos{
         display: flex;
+        flex-direction: column;
         max-width: 800px;
         margin: 0 auto;
-        width: 100px;
-        height: 200px;
+        width: 80%;
+        height: 100%;
+    }
+
+    footer{
+        display: flex;
+        margin-top: 50px;
+        bottom: 0;
+        padding: 10px;
     }
  }
