@@ -38,11 +38,11 @@ label input{
 
 /* body*/
 body{
-   display: grid;
+      
    background-color: antiquewhite;
    height: 100%; 
-   grid-template-columns: 1fr ;
-   grid-template-rows: 1fr 7fr 1fr;
+  
+  
 }
 
 
@@ -136,20 +136,23 @@ footer p{
 
     }
     
+
     /*cabeçalho geral*/
     header{
         max-width: 800px;
         display: flex;
         height: 100px;
         margin-bottom: 30px;
-        
-        
+   
+    
 
-        
-    }
+}
+     
+    
 
     header img{
        
+
         width: 18vh;
         height: 16vh;
     }
@@ -158,10 +161,16 @@ footer p{
         margin-right: 5px;
     }
 
+
+        width: 80px;
+        height: 100px;
+    }
+
     #tela-inicial{
         max-width: 800px;
         display: flex;
     }
+
      
     .paginas-videos a{
       height: 100%;
@@ -191,5 +200,7 @@ footer p{
         margin-top: 50px;
         bottom: 0;
         padding: 10px;
-    }
+  
+    
  }
+}
