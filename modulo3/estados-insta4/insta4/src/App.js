@@ -10,26 +10,41 @@ const MainContainer = styled.div`
 `
 
 class App extends React.Component {
+
+  
+  listaComponentes = [
+    <MainContainer>
+    <Post
+      nomeUsuario={'paulinha'}
+      fotoUsuario={'https://picsum.photos/50/50'}
+      fotoPost={'https://picsum.photos/200/150'}
+    />
+
+    <Post
+    nomeUsuario={'praia'}
+    fotoUsuario={'https://picsum.photos/50/49'}
+    fotoPost={'https://picsum.photos/200/149'}
+    />
+
+    <Post
+    nomeUsuario={'curtindo as ferias'}
+    fotoUsuario={'https://picsum.photos/50/48'}
+    fotoPost={'https://picsum.photos/200/148'}
+    />
+
+  </MainContainer>
+
+  ]
+
   render() {
     return (
       <MainContainer>
-        <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
-        />
+        <input placeholder='nome' value=''/>
+        <input placeholder='nome' value=''/>
+        <input placeholder='nome' value=''/>
+        <button>Confirmar</button>
 
-        <Post
-        nomeUsuario={'praia'}
-        fotoUsuario={'https://picsum.photos/50/49'}
-        fotoPost={'https://picsum.photos/200/149'}
-        />
-
-        <Post
-        nomeUsuario={'curtindo as ferias'}
-        fotoUsuario={'https://picsum.photos/50/48'}
-        fotoPost={'https://picsum.photos/200/148'}
-        />
+        {this.listaComponentes}
 
       </MainContainer>
     );
