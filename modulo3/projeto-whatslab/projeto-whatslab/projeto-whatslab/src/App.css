@@ -1,0 +1,25 @@
+.App {
+   
+    background-color: #a2cad4;
+    display: flex;
+    margin-top: 46.6%;
+    padding-left: 20%;
+    width: 200px;
+    border: 1px solid black;
+    align-items: center;
+    margin-left: 40%;
+    justify-content: center;
+ }
+  
+button{
+border-color: rgb(174, 174, 211);
+border-radius: 5%;
+display: fixed;
+}
+
+input{
+    display: fixed;
+    border-radius: 5%;
+}
+
+
