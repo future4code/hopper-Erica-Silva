@@ -1,0 +1,209 @@
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  font-style: oblique;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* tela inicial */
+
+.header{
+ box-shadow: 1px 1px 2px #414952 ;
+
+}
+
+h2{
+  
+  font-size: 2rem;
+  margin: .15em;
+  background: -webkit-linear-gradient(left,rgb(105, 21, 145) 15%, rgb(213, 122, 216) 50%, rgb(224, 131, 69) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.container{
+  box-shadow: 1px 1px 2px #414952 ;
+  padding-bottom: 20px;
+}
+
+.pretendenteApp{
+  
+  height: 400px;
+  width: 300px;
+  border-radius: 2%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 3px 5px #414952;
+  
+ 
+ 
+}
+
+.tela{
+  background-color: rgb(216, 211, 211);
+  border: #282e34 solid 2px;
+  border-radius: 2%;
+  width: 400px;
+  
+
+}
+
+.deslike{
+  border: none;
+  background-color: rgb(224, 33, 33);
+  color: rgb(241, 207, 207);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.deslike:hover{
+  background-color: rgb(92, 9, 9);
+  color: rgb(221, 115, 115);
+  transform:scale(1.1);
+
+}
+
+.like{
+  border: none;
+  background-color: rgb(7, 112, 63);
+  color: rgb(159, 235, 197);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  cursor: pointer;
+ 
+}
+
+.like:hover{
+  background-color: rgb(3, 56, 31);
+  color: rgb(96, 224, 160);
+  transform: scale(1.1);
+
+}
+
+.matches{
+ cursor: pointer;
+ margin-top: 10px;
+ width: 30px;
+ margin-left: 20px;
+}
+
+.matches:hover{
+  transform: scale(1.1);
+}
+
+.limparDados{
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 80px ;
+}
+
+/* tela lista */
+
+.meusMatches{
+  background-color: rgb(216, 211, 211);
+  border: #282e34 solid 2px;
+  border-radius: 2%;
+  width: 400px;
+
+}
+.headerLista{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  box-shadow: 1px 2px 2px #414952 ;
+}
+
+.pretendenteLista{
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+  height: 70px;
+  width: 80px;
+  border-radius: 50%;
+  justify-content:right;
+
+}
+
+.voltar{
+  
+  margin-left: 30px;
+  padding-right: 30px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.voltar:hover{
+  transform: scale(0.9);
+}
+
+li{
+  display: flex;
+  list-style: none;
+  position: relative;
+  height: 90px;
+  cursor: pointer;
+  align-items: center;
+ 
+}
+p{
+  font-size: 18px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+li:hover{
+  background-color: #21252c2a;
+  width: 100%;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
