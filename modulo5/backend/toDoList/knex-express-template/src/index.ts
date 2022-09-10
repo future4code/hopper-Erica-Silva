@@ -1,7 +1,7 @@
 import express,{Request, Response} from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
-import { User } from "./types";
+import { Users } from "./types";
 import connection from "./connection";
 
 const app = express();
@@ -21,8 +21,9 @@ app.post("/user", async (req:Request, res:Response) =>{
       
     }
 
-    const novoUsuario: User = {
-      id: Math.random(),
+    
+    const novoUsuario: Users = {
+      id: Date.now(),
       name:name,
       nickname:nickname,
       email:email
@@ -30,16 +31,11 @@ app.post("/user", async (req:Request, res:Response) =>{
 
     await connection.raw(`
 
-    
-    INSERT INTO User(id, name, nickname, email)
+   INSERT INTO User(id, name, nickname, email)
 
-    VALUES(
-      ${novoUsuario.id},
-      "${novoUsuario.name}", 
-      "${novoUsuario.nickname}", 
-      "${novoUsuario.email}")
-    
-      SELECT * FROM User
+    VALUES(${novoUsuario.id}, "${novoUsuario.name}","${novoUsuario.nickname}", "${novoUsuario.email}" )
+       
+         
     `);
     res.status(200).send("Usuário criado com sucesso!")
     
@@ -54,16 +50,22 @@ app.get("/user/:id", async (req:Request, res:Response)=>{
 
   try {
 
-    const buscarUsuario = req.params.buscarUsuario
+    const idUser = Number(req.params.idUser)
+    const {id,nickname} = req.body
 
-    if(buscarUsuario){
-      const pegarUsuario = await connection.raw(`
-      SELECT * FROM User
-      WHERE id = "${buscarUsuario}"
-      `)
+    if(!nickname || !id){
+      throw new Error("Usuário não encontrado");
+      
     }
 
-
+    if(idUser){
+      const pegarUsuario = await connection.raw(`
+      SELECT * FROM User
+      WHERE id = "${idUser}"
+      `)
+      res.status(200).send(pegarUsuario[0])
+    }
+   
     const pegarUsuario = await connection.raw(`
     SELECT * FROM User
 
@@ -74,7 +76,32 @@ app.get("/user/:id", async (req:Request, res:Response)=>{
     res.status(errorCode).send(error.message)
   }
 })
+app.put("/user/edit/:id", async (req:Request, res:Response)=>{
+  let errorCode = 400
 
+  try {
+
+    const id = Number(req.params.id)
+    const editUser = Number(req.body.editUser)
+
+  if(!editUser){
+    throw new Error("É preciso passar um novo nome");
+    
+  }
+
+  await connection.raw(`
+  UPDATE Users
+  SET ${editUser}
+  WHERE ${id}
+
+
+ `)
+ res.status(200).send("Usuario alterado com sucesso!")   
+    
+  } catch (error:any) {
+    res.status(errorCode).send(error.message)
+  }
+})
 
 
 const server = app.listen(process.env.PORT || 3003, () => {
