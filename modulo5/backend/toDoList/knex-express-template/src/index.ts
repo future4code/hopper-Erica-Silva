@@ -1,7 +1,7 @@
 import express,{Request, Response} from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
-import { Users } from "./types";
+import { Usuario } from "./types";
 import connection from "./connection";
 
 const app = express();
@@ -22,7 +22,7 @@ app.post("/user", async (req:Request, res:Response) =>{
     }
 
     
-    const novoUsuario: Users = {
+    const novoUsuario: Usuario = {
       id: Date.now(),
       name:name,
       nickname:nickname,
@@ -31,7 +31,7 @@ app.post("/user", async (req:Request, res:Response) =>{
 
     await connection.raw(`
 
-   INSERT INTO User(id, name, nickname, email)
+   INSERT INTO Usuario (id, name, nickname, email)
 
     VALUES(${novoUsuario.id}, "${novoUsuario.name}","${novoUsuario.nickname}", "${novoUsuario.email}" )
        
@@ -60,14 +60,14 @@ app.get("/user/:id", async (req:Request, res:Response)=>{
 
     if(idUser){
       const pegarUsuario = await connection.raw(`
-      SELECT * FROM User
+      SELECT * FROM Usuario
       WHERE id = "${idUser}"
       `)
       res.status(200).send(pegarUsuario[0])
     }
    
     const pegarUsuario = await connection.raw(`
-    SELECT * FROM User
+    SELECT * FROM Usuario
 
     `)
     res.status(200).send(pegarUsuario[0])
@@ -90,7 +90,7 @@ app.put("/user/edit/:id", async (req:Request, res:Response)=>{
   }
 
   await connection.raw(`
-  UPDATE Users
+  UPDATE Usuario
   SET ${editUser}
   WHERE ${id}
 
