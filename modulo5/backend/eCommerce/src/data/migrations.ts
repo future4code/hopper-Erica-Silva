@@ -16,17 +16,22 @@ const createTables = () => connection
       CREATE TABLE labecommerce_products(
          id INT PRIMARY KEY,
          name VARCHAR(255) NOT NULL,
-         price INT,
+         price INT NOT NULL,
          image_url VARCHAR(1000) NOT NULL)
          `)
      const createTablesRegistros = () => connection
          .raw(`
          CREATE TABLE labecommerce_purchases(
-            id INT PRIMARY KEY,
-            user_id VARCHAR(255) NOT NULL,
-            products_id VARCHAR(1000) NOT NULL,
+            id VARCHAR(100) PRIMARY KEY,
+            user_id INT NOT NULL,
+            products_id INT NOT NULL,
             quantity INT NOT NULL,
-            total_price INT NOT NULL)
+            total_price INT NOT NULL,
+
+            FOREIGN KEY (user_id) REFERENCES labecommerce_users(id),
+            FOREIGN KEY (products_id) REFERENCES labecommerce_products(id)
+            )
+
             `)
 
    .then(() => { console.log("Tabela produtos criadas") })

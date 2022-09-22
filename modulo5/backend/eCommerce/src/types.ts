@@ -34,3 +34,21 @@ export let products:labecommerce_products[] = [
     }
    
 ]
+
+export type labecommerce_purchases = {
+ id:number,
+ user_id:string,
+ products_id:string,
+ quantity:number,
+ total_price:number
+}
+
+export let buy:labecommerce_purchases[] = [
+    {
+        id:0,
+        user_id:"",
+        products_id:"",
+        quantity:0,
+        total_price:0,
+    }
+]
