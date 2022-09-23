@@ -52,3 +52,13 @@ export let buy:labecommerce_purchases[] = [
         total_price:0,
     }
 ]
+
+export type aula_webservices_users = {
+    id:string,
+    name:string,
+    nickname:string,
+    email:string,
+    zipcode:number
+}
+
+
