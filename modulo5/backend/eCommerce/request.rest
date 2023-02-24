@@ -1,0 +1,9 @@
+POST  http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name":"Erica",
+    "nickname":"Erica",
+    "email":"erica.l.s1996@gmail.com",
+    "zipcode":"60130400"
+}
